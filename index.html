@@ -19,8 +19,7 @@
     nav a:last-child { font-size: 14px; font-weight: 600; }
     main { padding-top: 34px; padding-bottom: 36px; }
     .eyebrow { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
-    h1 { max-width: 1050px; margin: 0 0 14px; font-size: clamp(24px, 3.2vw, 36px); line-height: 1.22; letter-spacing: -.025em; }
-    .intro { margin: 0 0 24px; color: var(--muted); font-size: 16px; }
+    h1 { max-width: 1050px; margin: 0 0 24px; font-size: clamp(24px, 3.2vw, 36px); line-height: 1.22; letter-spacing: -.025em; }
     figure { margin: 0; overflow: hidden; border: 1px solid #d5e0e8; border-radius: 12px; background: #fff; box-shadow: 0 12px 32px #172d420c; }
     video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); }
     figcaption { padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 20px; font-size: 14px; }
@@ -37,7 +36,6 @@
       .shell { width: calc(100% - 28px); }
       nav { min-height: 62px; }
       main { padding-top: 24px; }
-      .intro { font-size: 14px; }
       figcaption { padding: 12px 14px; font-size: 12px; }
       .actions .button { flex: 1; }
     }
@@ -53,19 +51,18 @@
   <main class="shell">
     <p class="eyebrow">Framework introduction</p>
     <h1>Multimodal View-Invariant Visual Speech Representation Learning via Calibrated View Aggregation</h1>
-    <p class="intro">An overview of the framework, its main methods, and experimental results.</p>
     <figure>
       <video id="introduction" controls playsinline preload="metadata"
         width="1920" height="1080"
         poster="introduction_video/poster.jpg"
-        aria-label="MuViRL introduction video with English narration and subtitles">
+        aria-label="MuViRL introduction video">
         <source src="introduction_video/MuViRL_introduction_video_1080p.mp4" type="video/mp4">
         Your browser does not support embedded video.
         <a href="introduction_video/MuViRL_introduction_video_1080p.mp4">Download the introduction video.</a>
       </video>
       <figcaption>
         <span class="video-label">MuViRL · Introduction</span>
-        <span class="video-details">1080p · 4 min 20 sec · English narration and subtitles</span>
+        <span class="video-details">1080p · 4 min 20 sec</span>
       </figcaption>
     </figure>
     <p id="video-error" role="status" hidden>The video could not be loaded. Try reloading this page or use the download link below.</p>
@@ -74,7 +71,7 @@
       <a class="button" href="introduction_video/MuViRL_introduction_video_1080p.mp4" download>Download video · 1080p</a>
     </div>
   </main>
-  <footer class="shell">MuViRL · Multimodal self-supervised representation learning</footer>
+  <footer class="shell">MuViRL · Multimodal View-Invariant Representation Learning</footer>
   <script>
     const video = document.getElementById('introduction');
     const errorMessage = document.getElementById('video-error');
