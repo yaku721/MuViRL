@@ -1,0 +1,41 @@
+{
+  "dataset": "OuluVS2",
+  "split_utterances": {
+    "train": 840,
+    "validation": 360,
+    "test": 360
+  },
+  "split_speakers": {
+    "train": 28,
+    "validation": 12,
+    "test": 12
+  },
+  "initialization": "AV-HuBERT Base, base_lrs3_iter5.pt",
+  "training": {
+    "steps": 2000,
+    "batch_size": 16,
+    "encoder_layers_updated": 12,
+    "encoder_lr": 1e-05,
+    "aggregation_lr": 0.001,
+    "max_frames": 160,
+    "aggregation": "Adaptive Weighting",
+    "reliability": "uniform",
+    "Temporal_RSA": false,
+    "Agg2S_coefficient": {
+      "MMP": 0,
+      "MMP + Agg2S": 0.1
+    },
+    "seeds": [
+      7,
+      17,
+      27
+    ]
+  },
+  "evaluation": "Final checkpoints; four oblique views encoded individually without audio input. Visual and audio queries are compared with same-utterance visual candidates at the same timestamp.",
+  "metrics": {
+    "prediction_accuracy": "100 * unit_correct / unit_total",
+    "cross_view_recall": "100 * visual_correct / retrieval_total",
+    "cross_modal_recall": "100 * audio_correct / retrieval_total"
+  },
+  "aggregation": "Sum counts over all test utterances and oblique views within each seed, then report the arithmetic mean and sample standard deviation over three seeds."
+}

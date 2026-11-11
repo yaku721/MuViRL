@@ -1,0 +1,7 @@
+configuration,metric,mean_pct,sample_std_pct,seeds
+MMP,prediction_accuracy,35.0354609929078,0.2923639830785888,3
+MMP,cross_view_recall,86.72662428283455,0.3886442692721139,3
+MMP,cross_modal_recall,68.6643924122603,0.6521092897422511,3
+MMP + Agg2S,prediction_accuracy,34.997467071935155,0.27295752337483303,3
+MMP + Agg2S,cross_view_recall,86.91399183335918,0.3777286002684387,3
+MMP + Agg2S,cross_modal_recall,68.69669716235074,0.5908686271749937,3

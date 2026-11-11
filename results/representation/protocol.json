@@ -1,0 +1,29 @@
+{
+  "paper_location": "Main",
+  "OuluVS2": {
+    "plot_seed": 7,
+    "test_utterances": 360,
+    "unit_ids": 447,
+    "views": 5,
+    "configuration": "MMP + Adaptive Weighting + Agg2S + Temporal RSA, uniform reliability; Baseline trained on the original view.",
+    "unit_metric": "Mean cosine similarity over distinct pairs of normalized features assigned to the same teacher unit. For n features and mean squared distance d from their centroid, similarity = 1 - n*d/(n-1).",
+    "view_metric": "Mean cosine similarity over all ten distinct pairs of synchronized views, then averaged over timestamps within each utterance.",
+    "plot_axes": {
+      "x": "MuViRL similarity",
+      "y": "Baseline similarity"
+    },
+    "units_with_higher_MuViRL_similarity": 436,
+    "utterances_with_higher_MuViRL_similarity": 353
+  },
+  "LRS3": {
+    "plot_seed": 7,
+    "sequence": "trainval/kyaiTGmwxnU/50002",
+    "synthesized_yaw_degrees": -25,
+    "synthesized_pitch_degrees": 0,
+    "configuration": "MMP + Adaptive Weighting + Agg2S + Temporal RSA, uniform reliability",
+    "frames": 108,
+    "matrix_rows": "Original visual frames for visual pairs; original audio frames for audiovisual pairs.",
+    "matrix_columns": "Synchronized synthesized visual frames.",
+    "frame_offset": "Candidate frame index minus query frame index. Offset profiles average the corresponding matrix diagonal without smoothing."
+  }
+}

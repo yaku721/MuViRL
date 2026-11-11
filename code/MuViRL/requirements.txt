@@ -1,0 +1,13 @@
+numpy>=1.23,<2
+torch>=2.0,<2.2
+opencv-python>=4.5,<5
+scipy>=1.10,<1.12
+python-speech-features==0.6
+hydra-core==1.0.7
+omegaconf==2.0.6
+sentencepiece>=0.1.96
+editdistance>=0.6
+bitarray>=2
+sacrebleu>=1.5
+PyYAML>=6
+Pillow>=10

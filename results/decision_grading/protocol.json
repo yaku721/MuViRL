@@ -1,0 +1,52 @@
+{
+  "supervision": "Four structural quality grades using added blur and occlusion; pixelation reserved for evaluation.",
+  "grades": {
+    "3": "Original input",
+    "2": "Mild distortion",
+    "1": "Moderate distortion",
+    "0": "Severe distortion"
+  },
+  "training": {
+    "MEAD only": [
+      "MEAD"
+    ],
+    "All data": [
+      "ORL",
+      "Yale",
+      "Notting Hill",
+      "MEAD"
+    ],
+    "steps": 1500,
+    "learning_rate": 3e-05,
+    "label_smoothing": 0.05,
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "updated_parameters": "Decision readout; visual encoder features cached"
+  },
+  "partitioning": "Actor and identity partitions disjoint across adaptation, calibration, and test.",
+  "MEAD_actors": {
+    "adaptation": [
+      "M005",
+      "M009",
+      "W011",
+      "W014"
+    ],
+    "calibration": [
+      "M011"
+    ],
+    "test": [
+      "W015"
+    ]
+  },
+  "test_examples_per_run": {
+    "MEAD": 1080,
+    "ORL": 48,
+    "Yale": 48,
+    "Notting_Hill": 48
+  },
+  "metric": "Accuracy = 100 times the fraction of examples whose maximum logit has the target grade. Positive temperature scaling preserves the maximum-logit class.",
+  "standard_deviation": "Sample standard deviation across three seeds; frozen readout has one deterministic result."
+}

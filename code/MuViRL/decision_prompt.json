@@ -1,0 +1,10 @@
+{
+  "type": "score",
+  "instructions": "Two grids show synchronized mouth motion from the same utterance. Read each grid left to right, then the second row. Judge how useful the second view is for recovering the articulation shown in the reference: changes in lip contour, opening and visible teeth. Accept camera rotation and natural occlusion. Do not reward sharpness alone.",
+  "criteria": [
+    "Very weak usable articulation evidence",
+    "Some articulation evidence, with several unclear mouth shapes",
+    "Useful articulation evidence, with most changes readable",
+    "Strong articulation evidence, with lip and opening changes clearly retained"
+  ]
+}

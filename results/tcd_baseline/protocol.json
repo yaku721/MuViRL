@@ -1,0 +1,26 @@
+{
+  "paper_location": "Main Section 4.4 and Figure 5(e), AV-HuBERT baseline",
+  "dataset": "TCD-TIMIT volunteers",
+  "speakers": 59,
+  "paired_utterances": 5782,
+  "videos": 11564,
+  "selection": "All available SA, SI, and SX utterances from all 59 volunteers; frontal and 30-degree views.",
+  "model": "Official AV-HuBERT Large VSR checkpoints",
+  "pretraining_hours": 1759,
+  "checkpoint_files": [
+    "large_vox_30h.pt",
+    "large_vox_433h.pt"
+  ],
+  "fine_tuning_hours": [
+    30,
+    433
+  ],
+  "target_dataset_fine_tuning": false,
+  "input": "Visual only",
+  "decoder_beam": 50,
+  "batch_size": 4,
+  "precision": "float32",
+  "preprocessing": "25 fps timestamp resampling, 68 facial landmarks, smoothed stable-point alignment, 96 by 96 grayscale lip crops, complete clips retained.",
+  "wer": "100 * sum(substitutions + deletions + insertions) / sum(reference_words)",
+  "data_fields": "Counts and public corpus identifiers; transcripts, audio, and source video are not included."
+}
